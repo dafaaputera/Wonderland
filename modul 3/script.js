@@ -18,7 +18,7 @@ const displayGroups = (groups) => {
     groupContainer.innerHTML = ''; // Kosongkan kontainer sebelum menampilkan data baru
 
     groups.forEach(group => {
-        // Membuat elemen untuk setiap grup
+        // elemen untuk setiap grup
         const groupCard = document.createElement('div');
         groupCard.classList.add('group-card');
 
@@ -27,7 +27,7 @@ const displayGroups = (groups) => {
         groupTitle.textContent = group.group_name;
         groupCard.appendChild(groupTitle);
 
-        // Tambahkan anggota grup
+        // tambahkan anggota grup
         const students = [group.student1, group.student2, group.student3, group.student4];
         students.forEach((student, index) => {
             if (student) {
@@ -37,10 +37,10 @@ const displayGroups = (groups) => {
             }
         });
 
-        // Tambahkan kartu grup ke kontainer
+        // tambahkan kartu grup ke kontainer
         groupContainer.appendChild(groupCard);
     });
 };
 
-// Jalankan fetch ketika halaman dimuat
+
 window.onload = fetchGroups;
